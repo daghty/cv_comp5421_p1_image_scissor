@@ -23,7 +23,7 @@ make -j
 > For example: Cost Graph \
 > <img src="img/3.png" width=300>
 ### Demo Video
-[![Watch the video](https://github.com/gogojjh/cv_comp5421_p1_image_scissor/blob/develop/pikaqu.png)](https://youtu.be/tsduQ8QRWf8)
+[![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://youtu.be/tsduQ8QRWf8)
 ### TODO List
 1. Implement other features on GUI
 > * Help menu and about window
