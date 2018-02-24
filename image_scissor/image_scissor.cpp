@@ -244,6 +244,13 @@ void ImageScissor::DrawShortestPath()
     }
 }
 
+/*
+ * TODO:
+ * fix the wrong usage of priority_queue.
+ * The data type should be Node and use _node_graph to record the state of each node.
+ * The data value(related to priority) in priority_queue should not be changed(not influence the queue)
+ * We can change the state of node in priority_queue
+*/
 void ImageScissor::DIJkstra()
 {
     std::cout << "[INFO]ImageScissor::DIJkstra" << std::endl;
@@ -258,10 +265,12 @@ void ImageScissor::DIJkstra()
         Node::Ptr q = _pqueue.top();
         _pqueue.pop();
         if (q->_state == EXPANDEND) continue;
+//        if (_node_graph[q->_row][q->_col]->_state == EXPANDEND) continue;
 
 //        std::cout << "(" << q->_row << "," << q->_col << "," << q->_total_cost  << ") " << q->_state << " ";
         // Remove the minimum cost node
         q->_state = EXPANDEND;
+//        _node_graph[q->_row][q->_col]->_state = EXPANDEND;
         for (int i = 0; i < 8; i++)
         {
             int r_row = q->_row + _d[i][0];
