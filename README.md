@@ -22,6 +22,8 @@ make -j
 1. You can click the above menu to see the cost Pixel Node, Cost Graph, Minimum Path Tree
 > For example: Cost Graph \
 > <img src="img/3.png" width=300>
+### Demo Video
+[![Watch the video](https://github.com/gogojjh/cv_comp5421_p1_image_scissor/blob/develop/pikaqu.png)](https://youtu.be/tsduQ8QRWf8)
 ### TODO List
 1. Implement other features on GUI
 > * Help menu and about window
