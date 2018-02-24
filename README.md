@@ -33,16 +33,16 @@ make -j
 > * This kind of container does't provide a **erase** and **update** operation. 
 > * The other problem is that we can only chage the state of each node in priority_queue but **can not change the date value(related to priority)**, otherwise it will destory the order the queue(the order won't change). 
 > * So you need to use other struction(like vector or array to record the current state of each node), and then add them into queue.
-> * The solution I found is like this: \
-``` std::priority_queue<Node::Ptr, std::vector<Node::Ptr>, ValueComp> pqueue; ``` \
-``` std::vector<vector<Node::Ptr> > _node_graph; ```
-``` Node::Ptr p = _pqueue.top(); ``` \
-``` if (p->_state == EXPANDEND) continue; // to discard useless node ``` \
-``` p->_state = EXPANDEND; // the state of all p in queue are changed, meaning that they will be discarded ```
-``` ii, jj \\ the position of extended point r ``` \
-``` r = _node_graph[ii][jj] ```
-``` r->_total_cost = min(r->_total_cost, p->_total_cost + c_pr); // is changed ``` \
-``` pqueue.push(r) // push new node```
+> * The solution I found is like this: 
+>> - ``` std::priority_queue<Node::Ptr, std::vector<Node::Ptr>, ValueComp> pqueue; ``` 
+>> - ``` std::vector<vector<Node::Ptr> > _node_graph; ```
+>> - ``` Node::Ptr p = _pqueue.top(); ``` 
+>> - ``` if (p->_state == EXPANDEND) continue; // to discard useless node ``` 
+>> - ``` p->_state = EXPANDEND; // the state of all p in queue are changed, meaning that they will be discarded ```
+>> - ``` ii, jj \\ the position of extended point r ``` 
+>> - ``` r = _node_graph[ii][jj] ```
+>> - ``` r->_total_cost = min(r->_total_cost, p->_total_cost + c_pr); // is changed ``` 
+>> - ``` pqueue.push(r) // push new node```
 2. Usage of floodfill algorithm
 > * My unstanding: after setting a seed, just go around, until meet a mountain(the difference of pixel is larger than threshold)
 
